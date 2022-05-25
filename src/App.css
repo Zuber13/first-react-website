@@ -1,38 +1,159 @@
-.App {
-  text-align: center;
+@import url("https://fonts.googleapis.com/css2?family=Poppins&display=swap");
+
+html,
+body {
+  margin: 0;
+  padding: 0;
+  font-family: "Poppins", sans-serif;
+  outline: none;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.logo {
+  margin: 0;
+  color: #fff;
+  font-size: 1.4rem;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.logo a{
+  text-decoration: none;
+  color: #fff;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+header {
+  width: 100%;
+  background-color: rgb(0, 132, 255);
+}
+
+.header {
+  width: 80%;
+  padding: 1rem;
+  margin: 0 auto;
   display: flex;
-  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.my-form {
+  display: flex;
+}
+
+.my-form input {
+  padding: 0.3rem;
+  margin: 0 5px;
+  outline: none;
+  border: none;
+  background-color: #fff;
+  color: #888;
+}
+
+::placeholder {
+  color: #666;
+}
+input[type="button"] {
+  background-color: rgb(67, 174, 115);
+  font-weight: bold;
+  color: #ddd;
+  padding: 0.4rem 1rem;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+/* content area */
+
+.content {
+  display: flex;
+  width: 100%;
+  color: #000;
+  margin: 6rem auto;
+  justify-content: space-between;
+}
+
+.text-area {
+  width: 45%;
+  margin: auto;
+}
+
+.sign-up-form {
+  width: 35%;
+}
+
+.content p {
+  font-size: 20px;
+  color: #666;
+}
+
+.title {
+  margin: 0;
+  font-size: 4.2rem;
+  font-weight: lighter;
+}
+
+label {
+  display: block;
+}
+
+.form-group {
+  margin: 30px 0;
+}
+
+.form-group input {
+  width: 65%;
+  padding: 8px;
+  font-size: 1.2rem;
+  border-radius: 5px;
+  border: 2px solid #ddd;
+  outline: none;
+}
+
+button {
+  width: 69%;
+  background-color: rgb(67, 174, 115);
+  padding: 15px;
+  border: none;
+  color: #fff;
+  font-weight: bold;
+  font-size: 1.5rem;
+  cursor: pointer;
+}
+
+/* footer area */
+
+.footer {
+  width: 100%;
+  border-top: 1px solid #ddd;
+  text-align: center;
+  position: fixed;
+  padding: 10px 0;
+  bottom: 0;
+}
+
+
+.footer ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
   align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
 }
 
-.App-link {
-  color: #61dafb;
+ul li {
+  margin: 10px 8px;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+ul li a {
+  text-decoration: none;
+  border-right: 1px solid #ddd;
+  padding: 0 10px;
+}
+
+span {
+  font-size: 12px;
+}
+
+/* about container */
+
+.container{
+  width: 80%;
+  margin: 0 auto;
 }
