@@ -1,6 +1,23 @@
-import React from "react";
+import React, {useState} from "react";
+import Axios from 'axios'
+
 
 function Content() {
+  const [username , setUserName] = useState();
+  const [email , setUserEmail] = useState();
+  const [password , setUserPassword] = useState();
+  async function handleSubmit(e) {
+    e.preventDefault();
+    try{
+     await Axios.post("http://localhost:8080/register", { username, email, password})
+     console.log('form is succesfully submmited :)')
+    }
+    
+    catch{
+      console.log('there is some error!!!')
+    }
+  }
+
   return (
     <>
       <div className="content">
@@ -10,21 +27,21 @@ function Content() {
         </div>
 
         <div className="sign-up-form">
-          <form autoComplete="off">
+          <form autoComplete="off" onSubmit={handleSubmit}>
             <div className="form-group">
               <label htmlFor="username">UserName</label>
-              <input type="text" placeholder="Pick a username" name="username" />
+              <input onChange={e => setUserName(e.target.value)}  type="text" placeholder="Pick a username" name="username" />
             </div>
             <div className="form-group">
               <label htmlFor="email">Email</label>
-              <input type="email" placeholder="Pick a email" name="email" />
+              <input onChange={e => setUserEmail(e.target.value)} type="email" placeholder="Pick a email" name="email" />
             </div>
             <div className="form-group">
               <label htmlFor="password">Password</label>
-              <input type="password" placeholder="Pick a password" name="password" />
+              <input  onChange={e => setUserPassword(e.target.value)} type="password" placeholder="Pick a password" name="password" />
             </div>
 
-            <button type="button">Sign up for Complex App</button>
+            <button type="button submit" className="submit">Sign up for Complex App</button>
           </form>
         </div>
       </div>

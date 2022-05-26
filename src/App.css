@@ -14,7 +14,7 @@ body {
   font-size: 1.4rem;
 }
 
-.logo a{
+.logo a {
   text-decoration: none;
   color: #fff;
 }
@@ -49,10 +49,11 @@ header {
 ::placeholder {
   color: #666;
 }
-input[type="button"] {
+
+.my-form .btn {
   background-color: rgb(67, 174, 115);
   font-weight: bold;
-  color: #ddd;
+  color: #fff;
   padding: 0.4rem 1rem;
   border-radius: 4px;
   cursor: pointer;
@@ -105,7 +106,7 @@ label {
   outline: none;
 }
 
-button {
+.submit {
   width: 69%;
   background-color: rgb(67, 174, 115);
   padding: 15px;
@@ -126,7 +127,6 @@ button {
   padding: 10px 0;
   bottom: 0;
 }
-
 
 .footer ul {
   list-style: none;
@@ -153,7 +153,18 @@ span {
 
 /* about container */
 
-.container{
+.container {
   width: 80%;
   margin: 0 auto;
+}
+
+/* new css for after login*/
+
+.create-post-btn,
+.sign-out-btn {
+  background-color: rgb(67, 174, 115);
+  margin: 0 5px;
+  border: none;
+  color: #ffff;
+  padding: 10px;
 }
