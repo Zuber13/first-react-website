@@ -12,7 +12,6 @@ function Content() {
      await Axios.post("http://localhost:8080/register", { username, email, password})
      console.log('form is succesfully submmited :)')
     }
-    
     catch{
       console.log('there is some error!!!')
     }
@@ -22,7 +21,7 @@ function Content() {
     <>
       <div className="content">
         <div className="text-area">
-          <h2 className="title">Remember <br/> Writing ?</h2>
+          <h2 className="title">Remember <br/> Writing <span className="name" style={{color : 'green'}}>{username}</span> ?</h2>
           <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Minima reiciendis recusandae asperiores animi nulla saepe placeat. Commodi architecto, eligendi tempore sunt aperiam non, perferendis ipsa aliquam nam earum voluptates possimus explicabo cumque vitae, laboriosam porro accusantium veritatis. Suscipit, deleniti dignissimos?</p>
         </div>
 

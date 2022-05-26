@@ -43,7 +43,8 @@ header {
   outline: none;
   border: none;
   background-color: #fff;
-  color: #888;
+  color: #000;
+  border-radius :5px;
 }
 
 ::placeholder {
@@ -149,6 +150,10 @@ ul li a {
 
 span {
   font-size: 12px;
+}
+
+.name{
+  font-size: inherit;
 }
 
 /* about container */
