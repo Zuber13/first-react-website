@@ -9,12 +9,12 @@ function Content() {
   async function handleSubmit(e) {
     e.preventDefault();
     try{
-     await Axios.post("http://localhost:8080/register", { username, email, password})
+     await Axios.post("/register", { username, email, password})
      console.log('form is succesfully submmited :)')
     }
     catch{
       console.log('there is some error!!!')
-    }
+    } 
   }
 
   return (
@@ -29,7 +29,7 @@ function Content() {
           <form autoComplete="off" onSubmit={handleSubmit}>
             <div className="form-group">
               <label htmlFor="username">UserName</label>
-              <input onChange={e => setUserName(e.target.value)}  type="text" placeholder="Pick a username" name="username" />
+              <input onChange={e => setUserName(e.target.value)} type="text" placeholder="Pick a username" name="username" />
             </div>
             <div className="form-group">
               <label htmlFor="email">Email</label>

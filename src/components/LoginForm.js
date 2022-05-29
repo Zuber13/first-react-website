@@ -8,14 +8,20 @@ function LoginForm(props) {
   async function handleSubmit(e) {
     e.preventDefault();
     try {
-      const response = await Axios.post("http://localhost:8080/login", { username, password });
+      const response = await Axios.post("/login", { username, password });
       // console.log(response);
       if (response.data) {
         // console.log(response.data)
-        props.setloggedIn(true)
-        props.setName(response.data.username)
+        localStorage.setItem("name", response.data.username);
+        localStorage.setItem("token", response.data.token);
+        localStorage.setItem("avatar", response.data.avatar);
+        props.setloggedIn(true);
+        props.setName(response.data.username);
       } else {
-        console.log("email or password did not match");
+        props.setError(true);
+        setTimeout(() => {
+          props.setError(false);
+        },5000)
       }
     } catch {
       console.log("error occured");
