@@ -2,7 +2,7 @@
   "name": "login-page",
   "version": "0.1.0",
   "private": true,
-  "homepage": "http://zuber13.github.io/first-react-website",
+  "homepage": "https://zuber13.github.io/first-react-website",
   "dependencies": {
     "@testing-library/jest-dom": "^5.16.4",
     "@testing-library/react": "^13.2.0",
@@ -20,7 +20,7 @@
     "test": "react-scripts test",
     "eject": "react-scripts eject",
     "predeploy": "npm run build",
-    "depoly": "gh-pages -d build" 
+    "depoly": "gh-pages -d build"
   },
   "eslintConfig": {
     "extends": [
